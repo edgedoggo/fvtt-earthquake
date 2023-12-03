@@ -8,15 +8,12 @@
 			"discord": "Knowself"
 		}
 	],
+	"esmodules": ["scripts/client-side.js"],
 	"version": "1.1",
 	"compatibility": {
 		"minimum": 10,
 		"verified": "10.290"
 	},
-    "esmodules": [
-      "scripts/client-side.js"
-    ]
-	],
 	"manifest": "https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/module.json",
 	"download": "https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/earthquake.zip"
 	}
