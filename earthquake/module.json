@@ -4,8 +4,8 @@
 	"description": "This module allows you to shake your players screen in a random fashion, at a configurable strength, for a configurable period.",
 	"authors": [
 		{
-			"name": "EdgeDoggo",
-			"discord": "Knowself"
+			"name": "knoself",
+			"discord": "knoself"
 		}
 	],
 	"esmodules": ["scripts/client-side.js"],
