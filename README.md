@@ -48,7 +48,7 @@ if (dmShake) {
     const originalPosition = canvas.stage.pivot.clone();
     const startTime = Date.now();
 
-    function animateGMWiggle() {
+   function animateGMWiggle() {
         const currentTime = Date.now();
         const elapsedTime = currentTime - startTime;
         if (elapsedTime >= wiggleData.wiggleDuration) {
@@ -61,5 +61,5 @@ if (dmShake) {
         requestAnimationFrame(animateGMWiggle);
     }
 
-    animateGMWiggle();
+   animateGMWiggle();
 }
