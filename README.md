@@ -1,6 +1,7 @@
 # fvtt-earthquake
 A Foundry Module to shake the screen like an earthquake!
 
+![earthquake](https://github.com/edgedoggo/fvtt-earthquake/assets/152747753/47535dc4-65bc-4d8e-9428-2de33f6b5a27)
 
 Have you ever wanted your players to shake and tremble as the ground rocks and shifts below them? 
 Is a castle crumbling and they need to escape before its too late?
@@ -12,7 +13,7 @@ EARTHQUAKE is my first release, it allows you to configure an earthquake effect 
 
 The module is configurable, and can be modified at the macro level to change it up!
 
-
+------------------------------------------------------------------
 INSTRUCTIONS:
 
 1) Install Earthquake from the Module Installation page of Foundry VTT
