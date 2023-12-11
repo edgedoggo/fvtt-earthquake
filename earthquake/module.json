@@ -1,19 +1,22 @@
 {
-	"id": "earthquake",
-	"title": "EarthQuake!",
-	"description": "This module allows you to shake your players screen in a random fashion, at a configurable strength, for a configurable period.",
-	"authors": [
-		{
-			"name": "knoself",
-			"discord": "knoself"
-		}
-	],
-	"esmodules": ["scripts/client-side.js"],
-	"version": "1.4",
-	"compatibility": {
-		"minimum": 10,
-		"verified": "10.290"
-	},
-	"manifest": "https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/module.json",
-	"download": "https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/earthquake.zip"
-	}
+    "id": "earthquake",
+    "title": "EarthQuake",
+    "description": "This module allows you to shake your players screen in a random fashion, at a configurable strength, for a configurable period.",
+    "authors": [
+        {
+            "name": "knoself",
+            "discord": "knoself"
+        }
+    ],
+    "esmodules": [
+        "scripts/client-side.js",
+        "scripts/earthquake-server.js"
+    ],
+    "version": "2.1",
+    "compatibility": {
+        "minimum": 10,
+        "verified": "10.291"
+    },
+    "manifest": "https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/module.json",
+    "download": "https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/earthquake.zip"
+}
