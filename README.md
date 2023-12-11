@@ -17,8 +17,9 @@ The module is configurable, and can be modified at the macro level to change it 
 INSTRUCTIONS:
 
 1) Install Earthquake from the Module Installation page of Foundry VTT
-2) Enable it in Modules
-3) Click to create a new macro, paste and configure the following:
+https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/module.json
+3) Enable it in Modules
+4) Click to create a new macro, paste and configure the following:
 ------------------------------------------------------------------
 
 
