@@ -18,9 +18,10 @@ INSTRUCTIONS:
 1) Install Earthquake from the Module Installation page of Foundry VTT
 2) Enable it in Modules
 3) Click to create a new macro, paste and configure the following:
+------------------------------------------------------------------
 
 
-   // Configure the EarthQuake!
+// Configure the EarthQuake!
 const wiggleData = {
     action: 'triggerEarthquake',
     wiggleAmount: 100, // increase for more shake
