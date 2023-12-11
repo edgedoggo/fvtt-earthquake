@@ -42,7 +42,7 @@ function playSound() {
 }
 
 // Broadcast Earthquake to Players and play sound
-game.socket.emit('module.EarthQuake', wiggleData);
+game.socket.emit('module.earthquake', wiggleData);
 playSound();
 
 // Screen wiggle logic for the GM's screen (if enabled)
