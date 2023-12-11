@@ -1,49 +1,34 @@
-Hooks.on('socketlib.ready', () => {
-    console.log("Socketlib is ready. Listening for screen wiggle event...");
+// Client-side listener in the EarthQuake module
+game.socket.on('module.EarthQuake', (data) => {
+    console.log(`EarthQuake Module Client-Side: Received message - ${JSON.stringify(data)}`);
 
-    game.socket.on('module.screenWiggle', (data) => {
-        console.log("Event listener triggered with data:", data);
-
-        if (data && data.start) {
-            try {
-                window.screenWiggle(data.wiggleAmount, data.wiggleDuration);
-                console.log("screenWiggle function called with amount:", data.wiggleAmount, "and duration:", data.wiggleDuration);
-            } catch (error) {
-                console.error("Error in screenWiggle function:", error);
+    try {
+        if (data.action === 'executeEarthquake') {
+            console.log("EarthQuake Module Client-Side: Executing earthquake effect.");
+            
+            const elem = document.getElementById("board");
+            if (elem) {
+                elem.animate([
+                    { transform: "translate(2px, 2px)" },
+                    { transform: "translate(-2px, -3px) rotate(-2deg)" },
+                    { transform: "translate(-4px, 0px) rotate(2deg)" },
+                    { transform: "translate(4px, 3px)" },
+                    { transform: "translate(2px, -2px) rotate(2deg)" },
+                    { transform: "translate(-2px, 3px) rotate(-2deg)" },
+                    { transform: "translate(-4px, 2px)" },
+                    { transform: "translate(4px, 2px) rotate(-2deg)" },
+                    { transform: "translate(-2px, -2px) rotate(2deg)" },
+                    { transform: "translate(2px, 3px)" },
+                    { transform: "translate(2px, -3px) rotate(-2deg)" }
+                ], { 
+                    duration: 500,
+                    iterations: 3 
+                });
+            } else {
+                console.log("EarthQuake Module Client-Side: 'board' element not found.");
             }
-        } else {
-            console.log("Screen wiggle event data is invalid or 'start' is false.");
         }
-    });
+    } catch (error) {
+        console.error("EarthQuake Module Client-Side: Error occurred while executing earthquake effect -", error);
+    }
 });
-
-window.screenWiggle = async function (wiggleAmount, wiggleDuration) {
-    console.log(`Starting screen wiggle with amount ${wiggleAmount} and duration ${wiggleDuration}`);
-
-    if (!canvas || !canvas.stage) {
-        console.error("Canvas or canvas.stage is undefined.");
-        return;
-    }
-
-    const originalPosition = canvas.stage.pivot.clone();
-    const startTime = Date.now();
-
-    function animate() {
-        const currentTime = Date.now();
-        const elapsedTime = currentTime - startTime;
-
-        if (elapsedTime >= wiggleDuration) {
-            canvas.animatePan({ x: originalPosition.x, y: originalPosition.y });
-            console.log("Screen wiggle ended.");
-            return;
-        }
-
-        const xOffset = (Math.random() * wiggleAmount - wiggleAmount / 2) | 0;
-        const yOffset = (Math.random() * wiggleAmount - wiggleAmount / 2) | 0;
-
-        canvas.animatePan({ x: originalPosition.x + xOffset, y: originalPosition.y + yOffset });
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-};
