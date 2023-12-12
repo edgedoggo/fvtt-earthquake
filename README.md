@@ -27,7 +27,7 @@ https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/module.jso
    
 ------------------------------------------------------------------
 
-
+```
 // Configure the EarthQuake!
 const wiggleData = {
     action: 'triggerEarthquake',
@@ -71,3 +71,4 @@ if (dmShake) {
 
    animateGMWiggle();
 }
+```
