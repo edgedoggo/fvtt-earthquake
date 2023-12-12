@@ -22,7 +22,8 @@ INSTRUCTIONS:
 https://github.com/edgedoggo/fvtt-earthquake/releases/download/latest/module.json
 
 3) Enable it in Modules
-4) Click to create a new macro, paste and configure the following:
+4) You can download and use this sound: https://pastebin.com/1Kh2ZWcB
+5) Click to create a new macro, paste and configure the following:
    
 ------------------------------------------------------------------
 
