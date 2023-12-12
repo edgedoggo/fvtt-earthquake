@@ -41,6 +41,8 @@ const dmShake = true; // Set to false to disable DM screen shake
 // Define the sound to play during the quake
 const soundToPlay = 'path-to-your-sound-file.ogg'; // Your file
 
+
+//There is no need to configure the following code (unless advanced configuration is desired)
 function playSound() {
     const sound = new Audio(soundToPlay);
     sound.volume = 0.5; // Adjust the volume as needed
